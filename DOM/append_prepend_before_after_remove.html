@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <ul id="list">
+        <li id="first">Item 1</li>
+        <li id="mid">Item 2</li>
+        <li id="last">Item 3</li>
+    </ul>
+</body>
+<script>
+
+    // Append and Prepend 
+
+
+   const list = document.getElementById("list");
+   const newItem1 = document.createElement("li");
+   const newItem2 = document.createElement("li");
+   newItem2.innerText = "World";
+   newItem1.innerText = "Hello";
+   list.append(newItem1); 
+   list.prepend(newItem2);
+
+
+  //before and after
+
+  const newItem3 = document.createElement("p");
+  newItem3.innerText = "Bubly";
+
+  const newItem4 = document.createElement("p");
+  newItem4.innerText = "Kumar";
+
+  
+  list.before(newItem3);
+  list.after(newItem4);
+
+
+  //remove
+
+  newItem1.remove();
+  newItem2.remove();
+  newItem3.remove();
+  newItem4.remove();
+
+
+
+
+
+
+
+</script>
+</html>

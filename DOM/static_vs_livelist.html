@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">This is heading</h1>
+    <ul id="list_items">
+        <li class="items">Item 1</li>
+        <li class="items">Item 2</li>
+        <li class="items">Item 3</li>
+        <li class="items">Item 4</li>
+    </ul>
+</body>
+
+<script>
+
+    //query Selector gives static list
+    //getElementsBySomething gives dynamic list
+
+    //static list : once it is initialized , if changed later , the change won't be reflected
+
+
+     let static = document.querySelectorAll(".items");
+     let dynamic = document.getElementsByTagName("li");
+
+     console.log(static);
+     console.log(dynamic); 
+
+
+     let newElement = document.createElement("li");
+     newElement.textContent="Hello";
+     dynamic[3].append(newElement); 
+     
+     console.log(dynamic);
+     console.log(static);
+
+
+  
+
+
+
+
+</script>
+</html>
